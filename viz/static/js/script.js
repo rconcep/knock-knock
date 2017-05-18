@@ -15,8 +15,12 @@ var displayJSON = function(query) {
     });
 };
 
-var query = '/winners?where=' + JSON.stringify({
-    "name": "Albert Einstein"
+var filters = [ {"name": "year", "op": "gte", "val": 2000},
+               {"name": "gender", "op": "==", "val": "female"} ];
+
+var order_by = [ {"field": "year", "direction": "asc"} ];
+
+var query = '/winners?' + 'q=' + JSON.stringify({'filters': filters, 'order_by': order_by
 });
 
 displayJSON(query);
