@@ -1,0 +1,8 @@
+#nobel-bar {
+    width: 600px;
+    height: 400px;
+}
+
+#nobel-bar .bar{
+    fill: blue;
+}
